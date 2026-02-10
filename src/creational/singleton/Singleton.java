@@ -1,3 +1,5 @@
+package creational.singleton;
+
 public class Singleton {
     private static Singleton instance;
     public String value;
