@@ -35,7 +35,7 @@ public class GameImplement implements Game{
 
     private void readObject(String name) throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream(name);
-        ObjectInputStream ois = new ObejectInputStream(fis);
+        ObjectInputStream ois = new ObjectInputStream(fis);
         Object o = ois.readObject();
         ois.close();
         fis.close();
