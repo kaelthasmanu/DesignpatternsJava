@@ -1,4 +1,7 @@
 package creational.abstractFactory;
 
-public class EnemyAbstractFactory {
+public abstract class EnemyAbstractFactory {
+    public abstract Enemy createEnemy();
+    public abstract Weapon createWeapon();
+    public abstract Armor createArmor();
 }
