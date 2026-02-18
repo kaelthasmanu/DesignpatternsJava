@@ -1,6 +1,6 @@
 package behavioral.observer;
 
-public class Assasin extends Enemy{
+public class Assasin extends Enemy implements MyObserver{
     public Assasin(String name) {
         this.name = name;
         this.active = false;
@@ -19,5 +19,11 @@ public class Assasin extends Enemy{
     void setActive() {
         this.active = true;
         System.out.println(name + " is now active.");
+    }
+
+    @Override
+    public void update(String message) {
+        setActive();
+        attack();
     }
 }

@@ -1,10 +1,12 @@
 package behavioral.observer;
 
-public class Mage extends Enemy{
+public class Mage extends Enemy implements MyObserver{
     public Mage(String name) {
         this.name = name;
         this.active = false;
     }
+
+
 
     @Override
     void attack() {
@@ -19,5 +21,11 @@ public class Mage extends Enemy{
     void setActive() {
         this.active = true;
         System.out.println(name + " is now active.");
+    }
+
+    @Override
+    public void update(String message) {
+        setActive();
+        attack();
     }
 }
