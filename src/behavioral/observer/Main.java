@@ -9,5 +9,8 @@ public class Main {
         guard.addObserver(mage1);
         guard.addObserver(mage2);
         guard.addObserver(assasin);
+
+        // Trigger notification to observers
+        guard.broadcastMessage("Enemy spotted!");
     }
 }

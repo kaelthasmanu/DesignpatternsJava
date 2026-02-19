@@ -15,4 +15,9 @@ public class Player implements Serializable {
         this.deaths = deaths;
         this.kills = kills;
     }
+
+    @Override
+    public String toString() {
+        return "Player{name='" + name + "', level=" + level + ", deaths=" + deaths + ", kills=" + kills + "}";
+    }
 }
